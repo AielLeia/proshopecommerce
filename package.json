@@ -2,6 +2,7 @@
   "name": "ecommerce_proshop",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "author": "isamelmohamedbouh <ismaelmedbouh@outlook.fr>",
   "license": "MIT",
   "scripts": {
