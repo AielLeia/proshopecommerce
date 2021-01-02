@@ -10,9 +10,10 @@ const App = () => {
       <Header />
       <main className='my-3'>
         <Container>
-          {routes.map((route) => {
+          {routes.map((route, index) => {
             return (
               <Route
+                key={index}
                 path={route.path}
                 component={route.component}
                 exact={route.exact}
