@@ -1,0 +1,13 @@
+{
+  "name": "ecommerce_proshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "isamelmohamedbouh <ismaelmedbouh@outlook.fr>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
