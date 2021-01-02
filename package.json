@@ -5,9 +5,16 @@
   "author": "isamelmohamedbouh <ismaelmedbouh@outlook.fr>",
   "license": "MIT",
   "scripts": {
-    "start": "node backend/server.js"
+    "start": "node ",
+    "server": "nodemon backend/server.js",
+    "client": "npm run start --prefix frontend",
+    "dev": "concurrently \"yarn server\" \"yarn client\" -n \"Server,Client\" -p \"[{name}]\" -c \"green,blue\""
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
   }
 }
