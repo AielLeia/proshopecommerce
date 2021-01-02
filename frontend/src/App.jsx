@@ -1,19 +1,28 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { Header, Footer } from './components';
-import { HomeScreen } from './screens';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { routes } from './routes';
 
 const App = () => {
   return (
-    <>
+    <Router>
       <Header />
       <main className='my-3'>
         <Container>
-          <HomeScreen />
+          {routes.map((route) => {
+            return (
+              <Route
+                path={route.path}
+                component={route.component}
+                exact={route.exact}
+              />
+            );
+          })}
         </Container>
       </main>
       <Footer />
-    </>
+    </Router>
   );
 };
 
