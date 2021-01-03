@@ -19,7 +19,7 @@ const routes = [
 const routesName = {
   homescreen: '/',
   productscreen: '/product/:id',
-  cartscreen: '/cart/:id?',
+  cartscreen: '/cart',
 };
 
 export { routes, routesName };
