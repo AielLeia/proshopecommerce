@@ -18,7 +18,7 @@ const routes = [
 
 const routesName = {
   homescreen: '/',
-  productscreen: '/product/:id',
+  productscreen: '/product',
   cartscreen: '/cart',
 };
 
