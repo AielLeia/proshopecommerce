@@ -5,6 +5,7 @@ import {
   ProductScreen,
   ProfileScreen,
   RegisterScreen,
+  ShippingScreen,
 } from '../screens';
 
 const routes = [
@@ -33,6 +34,10 @@ const routes = [
     path: '/profile',
     component: ProfileScreen,
   },
+  {
+    path: '/shipping',
+    component: ShippingScreen,
+  },
 ];
 
 const routesName = {
@@ -42,6 +47,7 @@ const routesName = {
   loginscreen: '/login',
   registerscreen: '/register',
   profilescreen: '/profile',
+  shippingscreen: '/shipping',
 };
 
 export { routes, routesName };
