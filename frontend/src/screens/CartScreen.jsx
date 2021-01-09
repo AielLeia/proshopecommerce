@@ -32,7 +32,7 @@ const CartScreen = ({ match, location, history }) => {
   };
 
   const checkoutHandler = () => {
-    history.push('/login?red=shipping');
+    history.push(`${routesName.loginscreen}?redirect=shipping`);
   };
 
   return (

@@ -4,4 +4,5 @@ export {
   userLoginReducer,
   userRegisterReducer,
   userDetailsReducer,
+  userUpdateProfileReducer,
 } from './userReducers';
