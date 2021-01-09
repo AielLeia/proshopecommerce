@@ -8,6 +8,7 @@ import {
   ProfileScreen,
   RegisterScreen,
   ShippingScreen,
+  OrderScreen,
 } from '../screens';
 
 const routes = [
@@ -48,6 +49,10 @@ const routes = [
     path: '/placeorder',
     component: PlaceOrderScreen,
   },
+  {
+    path: '/order/:id',
+    component: OrderScreen,
+  },
 ];
 
 const routesName = {
@@ -60,6 +65,7 @@ const routesName = {
   shippingscreen: '/shipping',
   paymentscreen: '/payment',
   placeorderscreen: '/placeorder',
+  orderscreen: '/order',
 };
 
 export { routes, routesName };
