@@ -34,9 +34,8 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
         )}
       </Nav.Item>
       <Nav.Item>
-        {/* TODO: routes name */}
         {step4 ? (
-          <LinkContainer to='/palceorder'>
+          <LinkContainer to={routesName.placeorderscreen}>
             <Nav.Link>Place order</Nav.Link>
           </LinkContainer>
         ) : (

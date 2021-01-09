@@ -20,9 +20,8 @@ const PaymentScreen = ({ history }) => {
   const submitHandler = (e) => {
     console.log();
     e.preventDefault();
-    dispatch(savePaymentMethod({ paymentMethod }));
-    // TODO: routes name
-    history.push('/palceorder');
+    dispatch(savePaymentMethod(paymentMethod));
+    history.push(routesName.placeorderscreen);
   };
 
   return (
