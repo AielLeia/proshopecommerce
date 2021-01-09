@@ -2,6 +2,7 @@ import {
   CartScreen,
   HomeScreen,
   LoginScreen,
+  PaymentScreen,
   ProductScreen,
   ProfileScreen,
   RegisterScreen,
@@ -38,6 +39,10 @@ const routes = [
     path: '/shipping',
     component: ShippingScreen,
   },
+  {
+    path: '/payment',
+    component: PaymentScreen,
+  },
 ];
 
 const routesName = {
@@ -48,6 +53,7 @@ const routesName = {
   registerscreen: '/register',
   profilescreen: '/profile',
   shippingscreen: '/shipping',
+  paymentscreen: '/payment',
 };
 
 export { routes, routesName };

@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveShippingAddress } from '../actions';
 import { FormContainer, CheckoutSteps } from '../components';
+import { routesName } from '../routes';
 
 const ShippingScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart);
@@ -21,8 +22,7 @@ const ShippingScreen = ({ history }) => {
     console.log();
     e.preventDefault();
     dispatch(saveShippingAddress({ address, city, postalCode, country }));
-    // TODO: routes name
-    history.push('/payment');
+    history.push(routesName.paymentscreen);
   };
 
   return (
