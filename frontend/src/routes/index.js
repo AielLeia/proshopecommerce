@@ -3,6 +3,7 @@ import {
   HomeScreen,
   LoginScreen,
   ProductScreen,
+  ProfileScreen,
   RegisterScreen,
 } from '../screens';
 
@@ -28,6 +29,10 @@ const routes = [
     path: '/register',
     component: RegisterScreen,
   },
+  {
+    path: '/profile',
+    component: ProfileScreen,
+  },
 ];
 
 const routesName = {
@@ -36,6 +41,7 @@ const routesName = {
   cartscreen: '/cart',
   loginscreen: '/login',
   registerscreen: '/register',
+  profilescreen: '/profile',
 };
 
 export { routes, routesName };

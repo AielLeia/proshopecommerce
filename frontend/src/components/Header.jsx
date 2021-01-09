@@ -32,8 +32,7 @@ const Header = () => {
               </LinkContainer>
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id='username'>
-                  {/* TODO: Utiliser les routes names */}
-                  <LinkContainer to='/profile'>
+                  <LinkContainer to={routesName.profilescreen}>
                     <NavDropdown.Item>Profile</NavDropdown.Item>
                   </LinkContainer>
                   <NavDropdown.Item onClick={logoutHandler}>
