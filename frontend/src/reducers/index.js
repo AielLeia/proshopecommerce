@@ -9,4 +9,4 @@ export {
   userUpdateProfileReducer,
 } from './userReducers';
 
-export { orderCreateReducer } from './orderReducers';
+export { orderCreateReducer, orderDetailsReducer } from './orderReducers';
