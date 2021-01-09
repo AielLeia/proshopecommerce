@@ -1,4 +1,4 @@
-import { CartScreen, HomeScreen, ProductScreen } from '../screens';
+import { CartScreen, HomeScreen, LoginScreen, ProductScreen } from '../screens';
 
 const routes = [
   {
@@ -14,12 +14,17 @@ const routes = [
     path: '/cart/:id?',
     component: CartScreen,
   },
+  {
+    path: '/login',
+    component: LoginScreen,
+  },
 ];
 
 const routesName = {
   homescreen: '/',
   productscreen: '/product',
   cartscreen: '/cart',
+  loginScreen: '/login',
 };
 
 export { routes, routesName };
