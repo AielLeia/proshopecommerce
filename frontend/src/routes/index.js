@@ -1,4 +1,10 @@
-import { CartScreen, HomeScreen, LoginScreen, ProductScreen } from '../screens';
+import {
+  CartScreen,
+  HomeScreen,
+  LoginScreen,
+  ProductScreen,
+  RegisterScreen,
+} from '../screens';
 
 const routes = [
   {
@@ -18,13 +24,18 @@ const routes = [
     path: '/login',
     component: LoginScreen,
   },
+  {
+    path: '/register',
+    component: RegisterScreen,
+  },
 ];
 
 const routesName = {
   homescreen: '/',
   productscreen: '/product',
   cartscreen: '/cart',
-  loginScreen: '/login',
+  loginscreen: '/login',
+  registerscreen: '/register',
 };
 
 export { routes, routesName };
