@@ -1,10 +1,12 @@
 export { listProducts, listProductDetails } from './productActions';
+
 export {
   addToCart,
   removeFromCart,
   saveShippingAddress,
   savePaymentMethod,
 } from './cartActions';
+
 export {
   login,
   logout,
@@ -12,3 +14,5 @@ export {
   getUserDetails,
   updateUserProfile,
 } from './userActions';
+
+export { createOrder } from './orderActions';

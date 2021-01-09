@@ -2,7 +2,7 @@ import {
   CartScreen,
   HomeScreen,
   LoginScreen,
-  PalceOrderScreen,
+  PlaceOrderScreen,
   PaymentScreen,
   ProductScreen,
   ProfileScreen,
@@ -46,7 +46,7 @@ const routes = [
   },
   {
     path: '/placeorder',
-    component: PalceOrderScreen,
+    component: PlaceOrderScreen,
   },
 ];
 
