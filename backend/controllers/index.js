@@ -6,6 +6,7 @@ export {
   registerUser,
   updatetUserProfile,
   getUsers,
+  deleteUser,
 } from './userController.js';
 
 export {
