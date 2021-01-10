@@ -12,6 +12,7 @@ import {
   UserListScreen,
   UserEditScreen,
   ProductListScreen,
+  ProductEditScreen,
 } from '../screens';
 
 const routes = [
@@ -68,6 +69,10 @@ const routes = [
     path: '/admin/productlist',
     component: ProductListScreen,
   },
+  {
+    path: '/admin/product/:id',
+    component: ProductEditScreen,
+  },
 ];
 
 const routesName = {
@@ -84,6 +89,7 @@ const routesName = {
   userlistscreen: '/admin/userslist',
   usereditscreen: '/admin/user',
   productlistscreen: '/admin/productlist',
+  producteditscreen: '/admin/product',
 };
 
 export { routes, routesName };

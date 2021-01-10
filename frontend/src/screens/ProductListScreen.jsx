@@ -37,8 +37,7 @@ const ProductListScreen = ({ history, match }) => {
       history.push(routesName.loginscreen);
     }
     if (successCreate) {
-      // TODO: routes name
-      history.push(`/admin/products/${createdProduct._id}`);
+      history.push(`${routesName.producteditscreen}/${createdProduct._id}`);
     } else {
       dispatch(listProducts());
     }
@@ -103,8 +102,9 @@ const ProductListScreen = ({ history, match }) => {
                   <td>{product.category}</td>
                   <td>{product.brand}</td>
                   <td>
-                    {/* TODO: route names */}
-                    <LinkContainer to={`/admin/product/${product._id}`}>
+                    <LinkContainer
+                      to={`${routesName.producteditscreen}/${product._id}`}
+                    >
                       <Button variant='light' className='btn-sm'>
                         <i className='fas fa-edit'></i>
                       </Button>
