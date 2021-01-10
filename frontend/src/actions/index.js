@@ -1,7 +1,8 @@
 export {
   listProducts,
   listProductDetails,
-  deleteProdct,
+  deleteProduct,
+  createProduct,
 } from './productActions';
 
 export {
