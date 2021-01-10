@@ -1,9 +1,15 @@
+import path from 'path';
 import express from 'express';
 import dotenv from 'dotenv';
 import 'colors';
 import { connectDB } from './config/index.js';
 
-import { productRoute, userRoute, orderRoute } from './routes/index.js';
+import {
+  productRoute,
+  userRoute,
+  orderRoute,
+  uploadRoutes,
+} from './routes/index.js';
 import { errorHandler, notFound } from './middlewares/errorMiddleware.js';
 
 dotenv.config();
@@ -21,14 +27,18 @@ app.get('/', (req, res) => {
 app.use('/api/products', productRoute);
 app.use('/api/users', userRoute);
 app.use('/api/orders', orderRoute);
+app.use('/api/upload', uploadRoute);
 
 app.get('/api/config/paypal', (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
 );
 
-app.use(notFound);
+const __dirname = path.resolve();
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
+app.use(notFound);
 app.use(errorHandler);
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(
