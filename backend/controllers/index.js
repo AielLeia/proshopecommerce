@@ -5,6 +5,7 @@ export {
   getUserProfile,
   registerUser,
   updatetUserProfile,
+  getUsers,
 } from './userController.js';
 
 export {
