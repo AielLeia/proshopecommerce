@@ -51,8 +51,7 @@ const Header = () => {
                   <LinkContainer to={routesName.userlistscreen}>
                     <NavDropdown.Item>Users</NavDropdown.Item>
                   </LinkContainer>
-                  {/* TODO: reoutes name */}
-                  <LinkContainer to='/admin/productlist'>
+                  <LinkContainer to={routesName.productlistscreen}>
                     <NavDropdown.Item>Products</NavDropdown.Item>
                   </LinkContainer>
                   {/* TODO: reoutes name */}
