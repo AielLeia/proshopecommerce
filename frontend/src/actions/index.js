@@ -15,4 +15,4 @@ export {
   updateUserProfile,
 } from './userActions';
 
-export { createOrder, getOrderDetails } from './orderActions';
+export { createOrder, getOrderDetails, paidOrder } from './orderActions';
