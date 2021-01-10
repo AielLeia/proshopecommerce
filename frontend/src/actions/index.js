@@ -1,4 +1,8 @@
-export { listProducts, listProductDetails } from './productActions';
+export {
+  listProducts,
+  listProductDetails,
+  deleteProdct,
+} from './productActions';
 
 export {
   addToCart,

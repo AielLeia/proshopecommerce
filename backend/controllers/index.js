@@ -1,4 +1,8 @@
-export { getProductById, getProducts } from './productController.js';
+export {
+  getProductById,
+  getProducts,
+  deleteProduct,
+} from './productController.js';
 
 export {
   authUser,
