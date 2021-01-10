@@ -11,4 +11,5 @@ export {
   addOrderItems,
   getOrderById,
   updateOrderToPaid,
+  getMyOrders,
 } from './orderController.js';

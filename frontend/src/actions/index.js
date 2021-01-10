@@ -15,4 +15,9 @@ export {
   updateUserProfile,
 } from './userActions';
 
-export { createOrder, getOrderDetails, paidOrder } from './orderActions';
+export {
+  createOrder,
+  getOrderDetails,
+  paidOrder,
+  listMyOrder,
+} from './orderActions';
