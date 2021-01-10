@@ -29,6 +29,7 @@ export {
   USER_UPDATE_PROFILE_REQUEST,
   USER_UPDATE_PROFILE_RESET,
   USER_UPDATE_PROFILE_SUCCESS,
+  USER_DETAILS_RESET,
 } from './userConstants';
 
 export {
@@ -45,4 +46,5 @@ export {
   ORDER_LIST_MY_FAIL,
   ORDER_LIST_MY_REQUEST,
   ORDER_LIST_MY_SUCCESS,
+  ORDER_LIST_MY_RESET,
 } from './orderConstants';
