@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Message, Loader, FormContainer } from '../components';
-import { listProductDetails } from '../actions';
+import { listProductDetails, updateProduct } from '../actions';
 import { routesName } from '../routes';
+import { PRODUCT_UPDATE_RESET } from '../constants';
 
 const ProductEditScreen = ({ match, history }) => {
   const productId = match.params.id;
@@ -22,7 +23,19 @@ const ProductEditScreen = ({ match, history }) => {
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
 
+  const productUpdate = useSelector((state) => state.productUpdate);
+  const {
+    loading: loadingUpdate,
+    error: errorUpdate,
+    success: successUpdate,
+  } = productUpdate;
+
   useEffect(() => {
+    if (successUpdate) {
+      dispatch({ type: PRODUCT_UPDATE_RESET });
+      history.push(routesName.productlistscreen);
+      return;
+    }
     if (!product.name || product._id !== productId) {
       dispatch(listProductDetails(productId));
     } else {
@@ -34,10 +47,22 @@ const ProductEditScreen = ({ match, history }) => {
       setCountInStock(product.countInStock);
       setDescription(product.description);
     }
-  }, [dispatch, product, productId]);
+  }, [dispatch, product, productId, successUpdate, history]);
 
   const submitHandler = (e) => {
     e.preventDefault();
+    dispatch(
+      updateProduct({
+        _id: productId,
+        name,
+        price,
+        image,
+        brand,
+        category,
+        description,
+        countInStock,
+      })
+    );
   };
 
   return (
@@ -52,8 +77,8 @@ const ProductEditScreen = ({ match, history }) => {
       ) : (
         <FormContainer>
           <h1>Edit Product</h1>
-          {/* {loading && <Loader />}
-          {error && <Message variant='danger'>{error}</Message>} */}
+          {loadingUpdate && <Loader />}
+          {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
           <Form onSubmit={submitHandler}>
             <Form.Group controlId='name'>
               <Form.Label>Name</Form.Label>
