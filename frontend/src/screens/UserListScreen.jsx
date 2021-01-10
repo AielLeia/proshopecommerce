@@ -4,16 +4,24 @@ import { Table, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Message, Loader } from '../components';
 import { listUsers } from '../actions';
+import { routesName } from '../routes';
 
-const UserListScreen = () => {
+const UserListScreen = ({ history }) => {
   const dispatch = useDispatch();
 
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
 
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
   useEffect(() => {
-    dispatch(listUsers());
-  }, [dispatch]);
+    if (userInfo && userInfo.isAdmin) {
+      dispatch(listUsers());
+    } else {
+      history.push(routesName.loginscreen);
+    }
+  }, [dispatch, history, userInfo]);
 
   const deleteHandler = (id) => {};
 
@@ -23,7 +31,7 @@ const UserListScreen = () => {
       {loading ? (
         <Loader />
       ) : error ? (
-        <Message variante='danger'>{error}</Message>
+        <Message variant='danger'>{error}</Message>
       ) : (
         <Table striped bordered responsive hover className='table-sm'>
           <thead>
