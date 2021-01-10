@@ -7,4 +7,8 @@ export {
   updatetUserProfile,
 } from './userController.js';
 
-export { addOrderItems, getOrderById } from './orderController.js';
+export {
+  addOrderItems,
+  getOrderById,
+  updateOrderToPaid,
+} from './orderController.js';
