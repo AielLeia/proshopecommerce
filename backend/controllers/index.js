@@ -7,6 +7,8 @@ export {
   updatetUserProfile,
   getUsers,
   deleteUser,
+  getUserById,
+  updateUser,
 } from './userController.js';
 
 export {
