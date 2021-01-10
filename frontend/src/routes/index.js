@@ -9,6 +9,7 @@ import {
   RegisterScreen,
   ShippingScreen,
   OrderScreen,
+  UserListScreen,
 } from '../screens';
 
 const routes = [
@@ -53,6 +54,10 @@ const routes = [
     path: '/order/:id',
     component: OrderScreen,
   },
+  {
+    path: '/admin/userslist',
+    component: UserListScreen,
+  },
 ];
 
 const routesName = {
@@ -66,6 +71,7 @@ const routesName = {
   paymentscreen: '/payment',
   placeorderscreen: '/placeorder',
   orderscreen: '/order',
+  userlistscreen: '/admin/userslist',
 };
 
 export { routes, routesName };
