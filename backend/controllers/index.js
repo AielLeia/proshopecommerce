@@ -2,6 +2,8 @@ export {
   getProductById,
   getProducts,
   deleteProduct,
+  createProduct,
+  updateProduct,
 } from './productController.js';
 
 export {
