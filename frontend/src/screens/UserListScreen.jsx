@@ -64,7 +64,7 @@ const UserListScreen = ({ history }) => {
                         style={{ color: 'green' }}
                       ></i>
                     ) : (
-                      <i className='fas fa-times' style={{ color: 'ref' }}></i>
+                      <i className='fas fa-times' style={{ color: 'red' }}></i>
                     )}
                   </td>
                   <td>

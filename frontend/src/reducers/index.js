@@ -9,6 +9,7 @@ export {
   userUpdateProfileReducer,
   userListReducer,
   userDeleteReducer,
+  userUpdateReducer,
 } from './userReducers';
 
 export {

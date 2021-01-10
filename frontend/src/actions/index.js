@@ -15,6 +15,7 @@ export {
   updateUserProfile,
   listUsers,
   deleteUser,
+  updateUser,
 } from './userActions';
 
 export {
