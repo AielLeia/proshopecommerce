@@ -30,4 +30,5 @@ export {
   paidOrder,
   listMyOrder,
   listOrder,
+  deliverOrder,
 } from './orderActions';
