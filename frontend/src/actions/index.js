@@ -29,4 +29,5 @@ export {
   getOrderDetails,
   paidOrder,
   listMyOrder,
+  listOrder,
 } from './orderActions';

@@ -13,6 +13,7 @@ import {
   UserEditScreen,
   ProductListScreen,
   ProductEditScreen,
+  OrderListScreen,
 } from '../screens';
 
 const routes = [
@@ -73,6 +74,11 @@ const routes = [
     path: '/admin/product/:id',
     component: ProductEditScreen,
   },
+  {
+    path: '/admin/orderlist',
+    component: OrderListScreen,
+  },
+  //
 ];
 
 const routesName = {
@@ -90,6 +96,7 @@ const routesName = {
   usereditscreen: '/admin/user',
   productlistscreen: '/admin/productlist',
   producteditscreen: '/admin/product',
+  orderlistscreen: '/admin/orderlist',
 };
 
 export { routes, routesName };

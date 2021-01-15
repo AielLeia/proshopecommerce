@@ -1,5 +1,6 @@
 import {
   ORDER_LIST_MY_RESET,
+  ORDER_LIST_RESET,
   USER_DELETE_FAIL,
   USER_DELETE_REQUEST,
   USER_DELETE_SUCCESS,
@@ -59,6 +60,7 @@ export const logout = () => async (dispatch) => {
   dispatch({ type: USER_DETAILS_RESET });
   dispatch({ type: ORDER_LIST_MY_RESET });
   dispatch({ type: USER_LIST_RESET });
+  dispatch({ type: ORDER_LIST_RESET });
 };
 
 export const register = (name, email, password) => async (dispatch) => {
