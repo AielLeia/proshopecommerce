@@ -5,6 +5,7 @@ export {
   createProduct,
   updateProduct,
   createProductReview,
+  listTopProducts,
 } from './productActions';
 
 export {
