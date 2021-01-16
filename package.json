@@ -6,12 +6,13 @@
   "author": "isamelmohamedbouh <ismaelmedbouh@outlook.fr>",
   "license": "MIT",
   "scripts": {
-    "start": "node ",
+    "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm run start --prefix frontend",
     "dev": "concurrently \"yarn server\" \"yarn client\" -n \"Server,Client\" -p \"[{name}]\" -c \"green,blue\"",
     "data:import": "node backend/seeder.js",
-    "data:destroy": "node backend/seeder.js -d"
+    "data:destroy": "node backend/seeder.js -d",
+    "heroku-post-build": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend "
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
