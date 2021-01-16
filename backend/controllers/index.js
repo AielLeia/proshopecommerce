@@ -4,6 +4,7 @@ export {
   deleteProduct,
   createProduct,
   updateProduct,
+  createProductReview,
 } from './productController.js';
 
 export {
