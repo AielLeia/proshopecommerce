@@ -4,6 +4,7 @@ export {
   productDeleteReducer,
   productCreateReducer,
   productUpdateReducer,
+  productCreateReviewReducer,
 } from './productReducers';
 
 export { cartReducer } from './cartReducers';
