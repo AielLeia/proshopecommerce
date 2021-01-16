@@ -78,7 +78,10 @@ const routes = [
     path: '/admin/orderlist',
     component: OrderListScreen,
   },
-  //
+  {
+    path: '/search/:keyword',
+    component: HomeScreen,
+  },
 ];
 
 const routesName = {
@@ -97,6 +100,7 @@ const routesName = {
   productlistscreen: '/admin/productlist',
   producteditscreen: '/admin/product',
   orderlistscreen: '/admin/orderlist',
+  homescreensearch: '/search',
 };
 
 export { routes, routesName };

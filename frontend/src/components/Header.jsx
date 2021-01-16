@@ -1,9 +1,11 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { routesName } from '../routes';
 import { logout } from '../actions';
+import SearchBox from './SearchBox';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -24,6 +26,7 @@ const Header = () => {
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
+            <Route render={({ history }) => <SearchBox history={history} />} />
             <Nav className='ml-auto'>
               <LinkContainer to={routesName.cartscreen}>
                 <Nav.Link>
@@ -54,8 +57,7 @@ const Header = () => {
                   <LinkContainer to={routesName.productlistscreen}>
                     <NavDropdown.Item>Products</NavDropdown.Item>
                   </LinkContainer>
-                  {/* TODO: reoutes name */}
-                  <LinkContainer to='/admin/orderlist'>
+                  <LinkContainer to={routesName.orderlistscreen}>
                     <NavDropdown.Item>Orders</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
