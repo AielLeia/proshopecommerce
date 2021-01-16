@@ -69,6 +69,7 @@ const routes = [
   {
     path: '/admin/productlist',
     component: ProductListScreen,
+    exact: true,
   },
   {
     path: '/admin/product/:id',
@@ -81,6 +82,20 @@ const routes = [
   {
     path: '/search/:keyword',
     component: HomeScreen,
+    exact: true,
+  },
+  {
+    path: '/page/:pageNumber',
+    component: HomeScreen,
+  },
+  {
+    path: '/search/:keyword/page/:pageNumber',
+    component: HomeScreen,
+  },
+  {
+    path: '/admin/productlist/:pageNumber',
+    component: ProductListScreen,
+    exact: true,
   },
 ];
 
