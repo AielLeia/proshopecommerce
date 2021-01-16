@@ -10,7 +10,7 @@ import {
   Button,
   Form,
 } from 'react-bootstrap';
-import { Loader, Message, Rating } from '../components';
+import { Loader, Message, Meta, Rating } from '../components';
 import { routesName } from '../routes';
 import { listProductDetails, createProductReview } from '../actions';
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants';
@@ -67,6 +67,7 @@ const ProductScreen = ({ match, history }) => {
         <Message variant='danger'>{error}</Message>
       ) : (
         <>
+          <Meta title={product.name} />
           <Row>
             <Col md={6}>
               <Image src={product.image} alt={product.name} fluid />
